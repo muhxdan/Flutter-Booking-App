@@ -1,3 +1,5 @@
+import 'package:booking_app/features/presentation/widgets/primary_button.dart';
+import 'package:booking_app/features/presentation/widgets/secondary_button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -52,6 +54,21 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            PrimaryButton(
+              onPressed: () {},
+              text: "Download",
+              width: 100,
+              type: PrimaryButtonType.type1,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            SecondaryButton(
+              onPressed: () {},
+              text: "Download",
+              width: 100,
+              type: SecondaryButtonType.type1,
             ),
           ],
         ),
