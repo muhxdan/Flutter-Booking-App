@@ -17,18 +17,21 @@ class OnboardingIndicator extends StatelessWidget {
           children: List.generate(
             cubit.state.onboardingList.length,
             (index) => index == cubit.state.currentIndex
-                ? _activeIndicator()
-                : _inActiveIndicator(),
+                ? _activeIndicator(index)
+                : _inActiveIndicator(index),
           ),
         );
       },
     );
   }
 
-  Widget _activeIndicator() {
+  Widget _activeIndicator(int index) {
     return Container(
       width: 16,
       height: 6,
+      margin: EdgeInsets.symmetric(
+        horizontal: index == 1 ? 12 : 0,
+      ),
       decoration: BoxDecoration(
         color: AppColor.accentPink,
         borderRadius: BorderRadius.circular(4),
@@ -36,10 +39,13 @@ class OnboardingIndicator extends StatelessWidget {
     );
   }
 
-  Widget _inActiveIndicator() {
+  Widget _inActiveIndicator(int index) {
     return Container(
       width: 6,
       height: 6,
+      margin: EdgeInsets.symmetric(
+        horizontal: index == 1 ? 12 : 0,
+      ),
       decoration: BoxDecoration(
         color: AppColor.ink03,
         borderRadius: BorderRadius.circular(4),

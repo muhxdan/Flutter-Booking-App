@@ -6,7 +6,6 @@ class OnboardingCubit extends Cubit<OnboardingState> {
   OnboardingCubit() : super(OnboardingState().init());
 
   void next() {
-    print("check");
     if (state.currentIndex < state.onboardingList.length - 1) {
       emit(state.clone()..currentIndex = state.currentIndex + 1);
     }
@@ -22,5 +21,10 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     if (index >= 0 && index < state.onboardingList.length) {
       emit(state.clone()..currentIndex = index);
     }
+  }
+
+  void skip() {
+    // emit(state.clone()..currentIndex = state.onboardingList.length - 1);
+    // TODO: implement skip
   }
 }
