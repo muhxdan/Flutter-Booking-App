@@ -1,3 +1,4 @@
+import 'package:booking_app/features/data/src/img_string.dart';
 import 'package:booking_app/features/presentation/widgets/primary_button.dart';
 import 'package:booking_app/features/presentation/widgets/secondary_button.dart';
 import 'package:flutter/material.dart';
@@ -12,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Booking App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: "Poppins",
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -70,6 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 100,
               type: SecondaryButtonType.type1,
             ),
+            Image.asset(ImgString.giantPhone),
           ],
         ),
       ),
