@@ -1,4 +1,4 @@
-import 'package:booking_app/extension/extension.dart';
+import 'package:booking_app/utils/extension/extension.dart';
 import 'package:booking_app/features/presentation/pages/onboarding/onboarding_cubit.dart';
 import 'package:booking_app/features/presentation/widgets/primary_button.dart';
 import 'package:booking_app/features/presentation/widgets/secondary_button.dart';
