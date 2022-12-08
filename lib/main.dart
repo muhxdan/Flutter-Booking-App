@@ -1,3 +1,4 @@
+import 'package:booking_app/features/presentation/pages/welcome/login/login_view.dart';
 import 'package:booking_app/features/presentation/pages/welcome/welcome_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               fontFamily: "Poppins",
             ),
-            home: const WelcomePage(),
+            home: const LoginPage(),
           );
         });
   }
